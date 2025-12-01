@@ -12,7 +12,7 @@ const CompanyOverview: React.FC = () => {
             <img 
               src="/about-hero.jpg" 
               alt="Landmark Creations Construction Excellence" 
-              className="w-[300px] h-[300px] ml-8 md:ml-0 md:w-[460px] md:h-[450px] items-center object-cover rounded-2xl shadow-2xl"
+              className="w-[280px] h-[280px] ml-6 md:ml-0 md:w-[460px] md:h-[450px] items-center object-cover rounded-2xl shadow-2xl"
             />
             
             {/* Experience Badge - Replaced with rectangular box */}
