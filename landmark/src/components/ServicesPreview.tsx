@@ -100,14 +100,14 @@ const ServicesPreview: React.FC = () => {
   }, [services.length]);
 
   // Get visible services for display
-  const getVisibleServices = () => {
-    const visible = [];
-    for (let i = 0; i < Math.min(3, services.length); i++) {
-      const index = (currentIndex + i) % services.length;
-      visible.push(services[index]);
-    }
-    return visible;
-  };
+//   const getVisibleServices = () => {
+//     const visible = [];
+//     for (let i = 0; i < Math.min(3, services.length); i++) {
+//       const index = (currentIndex + i) % services.length;
+//       visible.push(services[index]);
+//     }
+//     return visible;
+//   };
 
   // Get all services for the carousel (not just 3)
   const getAllCarouselItems = () => {
@@ -220,7 +220,7 @@ const ServicesPreview: React.FC = () => {
   // Mobile view - Show only current card
   const getMobileCarouselItems = () => {
     const service = services[currentIndex];
-    const isActive = true; // Always active in mobile view
+    // const isActive = true; // Always active in mobile view
     
     return (
       <div className="w-full flex justify-center">

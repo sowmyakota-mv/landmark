@@ -79,21 +79,21 @@ const FeaturedProjects: React.FC = () => {
     return () => clearInterval(interval);
   }, [projects.length]);
 
-  const nextProject = () => {
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setActiveProject((prev) => (prev + 1) % projects.length);
-      setIsTransitioning(false);
-    }, 500);
-  };
+//   const nextProject = () => {
+//     setIsTransitioning(true);
+//     setTimeout(() => {
+//       setActiveProject((prev) => (prev + 1) % projects.length);
+//       setIsTransitioning(false);
+//     }, 500);
+//   };
 
-  const prevProject = () => {
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setActiveProject((prev) => (prev - 1 + projects.length) % projects.length);
-      setIsTransitioning(false);
-    }, 500);
-  };
+//   const prevProject = () => {
+//     setIsTransitioning(true);
+//     setTimeout(() => {
+//       setActiveProject((prev) => (prev - 1 + projects.length) % projects.length);
+//       setIsTransitioning(false);
+//     }, 500);
+//   };
 
   const goToProject = (index: number) => {
     setIsTransitioning(true);

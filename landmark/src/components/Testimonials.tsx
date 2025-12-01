@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 
 const Testimonials: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [direction, setDirection] = useState<'next' | 'prev' | null>(null);
-  const cardRef = useRef<HTMLDivElement>(null);
+//   const cardRef = useRef<HTMLDivElement>(null);
 
   const testimonials = [
     {
