@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -25,13 +25,13 @@ const Header: React.FC = () => {
   return (
     <header className={isHomePage ? "absolute top-0 left-0 w-full z-50" : "fixed top-0 left-0 w-full z-50 bg-white shadow-lg"}>
       <div className="w-full px-8">
-        {/* White rectangular box for non-home pages */}
+        
         {!isHomePage && (
-          <div className="absolute  top-0 h-full bg-white rounded-b-2xl shadow-lg"></div>
+          <div className="absolute top-0 h-full bg-white rounded-b-2xl shadow-lg"></div>
         )}
         
-        <div className={`flex justify-between items-center  w-full relative z-10`}>
-          {/* Logo */}
+        <div className={`flex justify-between items-center w-full relative z-10`}>
+          
           <div className="flex items-center">
             <img 
               src="/logo-transparent-png.png" 
@@ -43,9 +43,9 @@ const Header: React.FC = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className={`font-bold transition-colors duration-200 ${
                   link.isCta
                     ? 'bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700'
@@ -53,11 +53,11 @@ const Header: React.FC = () => {
                 }`}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </nav>
 
-          {/* Mobile Button */}
+          {/* Mobile Menu Button */}
           <button
             className="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1"
             onClick={toggleMobileMenu}
@@ -97,9 +97,9 @@ const Header: React.FC = () => {
             isHomePage ? 'bg-black/80 backdrop-blur-sm' : 'bg-white shadow-lg'
           }`}>
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className={`font-lg transition-colors duration-200 text-center ${
                   link.isCta
                     ? `${isHomePage ? 'bg-blue-600' : 'bg-blue-700'} text-white px-4 py-2 rounded-lg hover:bg-blue-700`
@@ -108,7 +108,7 @@ const Header: React.FC = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>
