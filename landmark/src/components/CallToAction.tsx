@@ -2,7 +2,7 @@ import React from 'react';
 
 const CallToAction: React.FC = () => {
   return (
-    <section className="relative py-2 w-full overflow-hidden">
+    <section className="relative py-6 w-full overflow-hidden">
       {/* Background Image with Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         {/* Construction Background Image */}
@@ -18,7 +18,7 @@ const CallToAction: React.FC = () => {
       </div>
 
       {/* Content Container */}
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+      <div className="container mx-auto px-6 md:px-6 relative z-10">
         {/* Flex container for side-by-side layout */}
         <div className="flex items-center justify-between md:p-8">
           
