@@ -1,5 +1,6 @@
 import React from "react";
 import { CheckCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const About: React.FC = () => {
   return (
@@ -10,43 +11,24 @@ const About: React.FC = () => {
         {/* Background Image with Gradient Overlay */}
         <div className="absolute inset-0">
           <img
-            src="/about-hero2.jpg"
-            className="w-full h-full object-cover"
+            src="/about-hero1.jpg"
+            className="w-full h-full object-cover mt-20"
             alt="Construction Hero"
           />
-          {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-blue-800/85 to-indigo-900/90"></div> */}
-        </div></section>
-        
-        {/* Hero Content */}
-        <section>
-        <div className="relative h-full flex items-center">
-          <div className="container mx-auto px-6">
-            <div className="max-w-3xl">
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                Building Dreams, <span className="text-yellow-400">Creating Legacies</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
-                For over a decade, we've been transforming visions into enduring structures 
-                that stand as testaments to quality, innovation, and excellence.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-bold py-4 px-8 rounded-xl hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                  Explore Our Journey
-                </button>
-                <button className="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-xl hover:bg-white/10 transition-all duration-300">
-                  Meet Our Team
-                </button>
-              </div>
-            </div>
-          </div>
+          {/* Gradient Overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-transparent"></div>
         </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <div className="animate-bounce">
-            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
+        
+        {/* Hero Text Content */}
+        <div className="relative h-full flex flex-col justify-center items-center text-center px-6 mt-32 md:mt-36">
+          <h1 className="text-5xl md:text-4xl font-bold text-white mb-4">
+            About Landmark Creations
+          </h1>
+          <div className="flex items-center justify-center space-x-2 text-red-800 text-lg md:text-xl ">
+            <span className="font-semibold hover:text-white transition-colors cursor-pointer">
+                <Link to="/">Home</Link></span>
+            <span className="text-gray-900 ">&gt;&gt;</span>
+            <span className="text-blue-400 font-semibold">About</span>
           </div>
         </div>
       </section>
@@ -64,7 +46,7 @@ const About: React.FC = () => {
               />
               {/* Experience Badge */}
               <div className="absolute -bottom-6 -right-6">
-                <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl p-6 shadow-2xl">
+                <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl p-4 shadow-2xl">
                   <div className="text-4xl font-bold mb-1">10+ Years</div>
                   <div className="text-sm font-medium">Of Excellence</div>
                 </div>
@@ -201,27 +183,6 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* ================= EXPERIENCE HIGHLIGHTS ================= */}
-      <section className="py-16 px-6 max-w-7xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-10">
-          10+ Years of Excellence
-        </h2>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { number: "150+", label: "Completed Projects" },
-            { number: "10+", label: "Years Experience" },
-            { number: "50+", label: "Skilled Professionals" },
-            { number: "95%", label: "Client Satisfaction" },
-          ].map((stat, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <h3 className="text-4xl font-bold text-blue-600">{stat.number}</h3>
-              <p className="text-gray-600">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* ================= WHAT MAKES US DIFFERENT ================= */}
       <section className="bg-gray-50 py-16 px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-10">
@@ -273,115 +234,92 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* ================= TIMELINE ================= */}
-      <section className="bg-gray-50 py-16 px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
-          Our Journey
-        </h2>
-
-        <div className="max-w-4xl mx-auto space-y-8 border-l-4 border-blue-600 pl-6">
-          {[
-            { year: "2013", text: "Landmark Creations Established" },
-            { year: "2015", text: "Completed 50+ Residential Projects" },
-            { year: "2017", text: "Expanded to Commercial Construction" },
-            { year: "2019", text: "Adopted Modern Engineering Technologies" },
-            { year: "2021", text: "Major Infrastructure Projects Launched" },
-            { year: "2024", text: "Achieved 150+ Completed Projects" },
-          ].map((item, i) => (
-            <div key={i}>
-              <h3 className="text-xl font-bold text-blue-600">{item.year}</h3>
-              <p className="text-gray-600">{item.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* ================= TEAM SECTION ================= */}
-      <section className="py-16 px-6 max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
-          Meet Our Leadership
-        </h2>
+<section className="py-16 px-6 max-w-7xl mx-auto">
+  <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
+    Our Team Collaboration
+  </h2>
+  
+  <div className="max-w-4xl mx-auto text-center mb-12">
+    <p className="text-gray-600 text-lg mb-6">
+      At Landmark Creations, we believe that exceptional buildings are created by exceptional teams. 
+      Our collaborative approach ensures that every project benefits from diverse expertise and 
+      collective wisdom.
+    </p>
+  </div>
 
-        <div className="grid md:grid-cols-3 gap-10 text-center">
-          {[
-            { name: "Managing Director", img: "https://via.placeholder.com/400" },
-            { name: "Project Manager", img: "https://via.placeholder.com/400" },
-            { name: "Senior Architect", img: "https://via.placeholder.com/400" },
-          ].map((member, i) => (
-            <div key={i}>
-              <img
-                src={member.img}
-                className="rounded-xl shadow-lg object-cover w-full h-64"
-                alt={member.name}
-              />
-              <h3 className="text-xl font-semibold mt-4">{member.name}</h3>
-            </div>
-          ))}
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {[
+      {
+        title: "Cross-Functional Teams",
+        content: "Architects, engineers, and project managers work together from concept to completion, ensuring seamless coordination and innovative solutions at every stage.",
+        icon: "👥"
+      },
+      {
+        title: "Collective Problem-Solving",
+        content: "Challenges are addressed through team brainstorming sessions, leveraging diverse perspectives to find optimal construction solutions and overcome obstacles.",
+        icon: "💡"
+      },
+      {
+        title: "Regular Progress Reviews",
+        content: "Weekly team meetings and digital dashboards keep everyone aligned on project milestones, timelines, and quality standards for transparent communication.",
+        icon: "📊"
+      },
+      {
+        title: "Shared Responsibility",
+        content: "Every team member takes ownership of their domain while supporting colleagues, creating a culture of mutual accountability and pride in collective achievements.",
+        icon: "🤝"
+      },
+      {
+        title: "Continuous Learning",
+        content: "Regular training sessions and knowledge sharing ensure our team stays updated with the latest construction technologies, materials, and sustainable practices.",
+        icon: "📚"
+      },
+      {
+        title: "Client Collaboration",
+        content: "Our teams work closely with clients throughout the process, incorporating feedback and ensuring the final result aligns perfectly with vision and expectations.",
+        icon: "🎯"
+      }
+    ].map((item, i) => (
+      <div 
+        key={i} 
+        className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+      >
+        <div className="text-4xl mb-4">{item.icon}</div>
+        <h3 className="text-xl font-bold text-gray-800 mb-4">{item.title}</h3>
+        <p className="text-gray-600">{item.content}</p>
+      </div>
+    ))}
+  </div>
+
+  {/* Team Culture Highlight */}
+  <div className="mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 md:p-12">
+    <div className="max-w-3xl mx-auto text-center">
+      <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
+        Our Team Culture: Building Together
+      </h3>
+      <p className="text-gray-600 text-lg mb-6">
+        We've cultivated a work environment where collaboration isn't just encouraged—it's essential. 
+        Our teams operate on principles of mutual respect, open communication, and shared passion 
+        for construction excellence.
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+        <div className="bg-white rounded-lg p-4 shadow-sm">
+          <div className="font-bold text-blue-600 text-lg mb-2">Open Communication</div>
+          <p className="text-sm text-gray-600">Transparent dialogue across all levels and departments</p>
         </div>
-      </section>
-
-      {/* ================= AWARDS & CERTIFICATIONS ================= */}
-      <section className="bg-gray-50 py-16 px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          Awards & Certifications
-        </h2>
-
-        <p className="text-gray-600">
-          ISO Certified • Govt Approved • Excellence Awards 2022 & 2023
-        </p>
-      </section>
-
-      {/* ================= OUR PROCESS ================= */}
-      <section className="py-16 px-6 max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
-          How We Work
-        </h2>
-
-        <div className="grid md:grid-cols-5 gap-8 text-center">
-          {[
-            "Requirement Analysis",
-            "Planning & Design",
-            "Material Selection",
-            "Execution & Quality Check",
-            "Final Delivery",
-          ].map((step, i) => (
-            <div key={i} className="p-6 bg-white rounded-xl shadow-lg">
-              <p className="font-semibold">{step}</p>
-            </div>
-          ))}
+        <div className="bg-white rounded-lg p-4 shadow-sm">
+          <div className="font-bold text-blue-600 text-lg mb-2">Innovation Focus</div>
+          <p className="text-sm text-gray-600">Encouraging creative solutions and new approaches</p>
         </div>
-      </section>
-
-      {/* ================= TESTIMONIALS ================= */}
-      <section className="bg-gray-100 py-16 px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
-          What Our Clients Say
-        </h2>
-
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-          {[
-            "Landmark Creations built our home exactly as promised with exceptional quality.",
-            "Professional team, on-time delivery, and excellent communication.",
-          ].map((review, i) => (
-            <div key={i} className="bg-white shadow-lg p-6 rounded-xl">
-              <p className="text-gray-600 italic">" {review} "</p>
-              <p className="mt-4 font-semibold text-gray-800">— Client</p>
-            </div>
-          ))}
+        <div className="bg-white rounded-lg p-4 shadow-sm">
+          <div className="font-bold text-blue-600 text-lg mb-2">Quality Unity</div>
+          <p className="text-sm text-gray-600">Shared commitment to exceptional craftsmanship</p>
         </div>
-      </section>
-
-      {/* ================= CTA ================= */}
-      <section className="py-16 text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
-        <p className="text-gray-600 mb-6">
-          We'd love to bring your ideas to life with our expertise.
-        </p>
-        <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-          Contact Us
-        </button>
-      </section>
-
+      </div>
+    </div>
+  </div>
+</section>
     </div>
   );
 };
