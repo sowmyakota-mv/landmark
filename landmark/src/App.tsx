@@ -1,3 +1,4 @@
+import {Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import CallToAction from './components/CallToAction';
 import CompanyOverview from './components/CompanyOverview';
@@ -8,10 +9,16 @@ import ProcessOverview from './components/ProcessOverview';
 import ServicesPreview from './components/ServicesPreview';
 import Testimonials from './components/Testimonials';
 import WhyChooseUs from './components/WhyChooseUs';
+import About from './pages/AboutPage';
+import Header from './components/Header';
 
 function App() {
   return (
     <>
+    <Router>
+      <Header/>
+      <Routes>
+      <Route path='/' element={
       <div className="w-full">  
         <HeroSection/>
         <CompanyOverview/>
@@ -21,8 +28,11 @@ function App() {
         <ProcessOverview/>
         <Testimonials/>
         <CallToAction/>
-        <Footer/>        
-        </div>
+       </div> }/>
+       <Route path='/about-landmark-creations' element={<About/>}/>
+       </Routes> 
+        <Footer/>       
+        </Router>
     </>
   );
 }

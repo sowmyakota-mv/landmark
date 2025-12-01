@@ -12,22 +12,22 @@ const CompanyOverview: React.FC = () => {
             <img 
               src="/about-hero.jpg" 
               alt="Landmark Creations Construction Excellence" 
-              className="w-[400px] h-[360px] md:w-[460px] md:h-[450px] items-center object-cover rounded-2xl shadow-2xl"
+              className="w-[320px] h-[320px] ml-12 md:ml-0 md:w-[460px] md:h-[450px] items-center object-cover rounded-2xl shadow-2xl"
             />
             
             {/* Experience Badge - Replaced with rectangular box */}
-            <div className="absolute top-2 -left-12 md:top-4 md:-left-20">
+            <div className="absolute top-2 -left-8 md:top-4 md:-left-20">
               {/* Rectangular Box with Dashed Border */}
               <div className="relative">
                 {/* Main Box */}
-                <div className="relative bg-gradient-to-br from-red-300 to-red-300 rounded-xl p-4 shadow-2xl border border-red-100 backdrop-blur-sm">
+                <div className="relative bg-gradient-to-br from-red-300 to-red-300 rounded-xl p-2 md:p-4 shadow-2xl border border-red-100 backdrop-blur-sm">
                     {/* Dashed Border Effect */}
                 <div className="absolute inset-1 border border-dashed border-white rounded-xl"></div>
                 
                   {/* Content */}
                   <div className="flex items-center space-x-2">
                     {/* Trust Icon */}
-                    <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
+                    <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                       </svg>
@@ -35,8 +35,8 @@ const CompanyOverview: React.FC = () => {
                     
                     {/* Experience Text */}
                     <div>
-                      <div className="text-lg font-bold text-blue-600">10+ Years</div>
-                      <div className="text-sm font-medium text-gray-700">Of Trusted Experience</div>
+                      <div className="text-sm md:text-lg font-bold text-blue-600">10+ Years</div>
+                      <div className="text-xs md:text-sm font-medium text-gray-700">Of Trusted Experience</div>
                       {/* <div className="text-xs text-gray-500 mt-1">Industry Excellence</div> */}
                     </div>
                   </div>

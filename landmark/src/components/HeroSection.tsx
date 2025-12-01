@@ -41,7 +41,7 @@ const HeroSection: React.FC = () => {
 //   };
 
   return (
-    <section id="home" className="relative w-full h-screen overflow-hidden">
+    <section id="/" className="relative w-full h-screen overflow-hidden">
       
       {/* Slides Container */}
       <div className="relative w-full h-full">
@@ -71,7 +71,7 @@ const HeroSection: React.FC = () => {
 
               {/* Title */}
 <div
-  className={`absolute top-76 md:top-90  md:right-20 z-30 md:w-1/2 transition-all duration-1000 ease-out delay-300 ${
+  className={`absolute top-84 md:top-96  md:right-20 z-30 md:w-1/2 transition-all duration-1000 ease-out delay-300 ${
     slidePosition === 0 
       ? "opacity-100 translate-x-0" 
       : "opacity-0 translate-x-10"
@@ -88,40 +88,6 @@ const HeroSection: React.FC = () => {
 
       {/* Header */}
       <Header />
-
-      {/* Slide Indicators */}
-      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-40 flex space-x-3">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              currentSlide === index ? 'bg-white w-8' : 'bg-white bg-opacity-50'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div> */}
-
-      {/* Navigation Arrows */}
-      {/* <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-40 bg-black bg-opacity-40 hover:bg-opacity-60 text-white p-3 rounded-full transition-all duration-300"
-        aria-label="Previous slide"
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-40 bg-black bg-opacity-40 hover:bg-opacity-60 text-white p-3 rounded-full transition-all duration-300"
-        aria-label="Next slide"
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-        </svg>
-      </button> */}
     </section>
   );
 };

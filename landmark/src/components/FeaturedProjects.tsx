@@ -254,7 +254,7 @@ const FeaturedProjects: React.FC = () => {
         {/* Mobile Main Project Showcase Container */}
         <div className="lg:hidden">
           {/* Mobile Main Project Image */}
-          <div className="relative h-[660px] rounded-2xl overflow-hidden mb-8">
+          <div className="relative h-[700px] rounded-2xl overflow-hidden mb-8">
             <div 
               className={`absolute inset-0 transition-all duration-700 ${
                 isTransitioning ? 'opacity-0 scale-110' : 'opacity-100 scale-100'
@@ -304,7 +304,7 @@ const FeaturedProjects: React.FC = () => {
               </p>
 
               {/* CTA Button */}
-              <button className="w-1/2 bg-white text-gray-900 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+              <button className="w-3/2 bg-white text-gray-900 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
                 View Project Details
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />

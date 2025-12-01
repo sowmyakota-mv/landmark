@@ -132,7 +132,7 @@ const Testimonials: React.FC = () => {
         {/* Testimonial Cards Stack */}
         <div className="flex justify-center items-center min-h-[400px] -mt-20 relative">
           {/* Stack Container */}
-          <div className="relative w-full max-w-lg h-[240px]">
+          <div className="relative w-full max-w-lg h-[300px] md:h-[240px]">
             
             {/* Back Card (Bottom of Stack) */}
             <div className="absolute inset-0 flex items-center justify-center">
@@ -213,7 +213,7 @@ const Testimonials: React.FC = () => {
             disabled={isAnimating}
             className="absolute -left-4 md:left-8 top-1/2 transform -translate-y-1/2 bg-white shadow-xl rounded-full p-4 hover:bg-blue-50 transition-all duration-300 hover:scale-110 border border-gray-200 disabled:opacity-50 disabled:cursor-not-allowed z-20"
           >
-            <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 md:w-6 h-4 md:h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
@@ -223,7 +223,7 @@ const Testimonials: React.FC = () => {
             disabled={isAnimating}
             className="absolute -right-4 md:right-8 top-1/2 transform -translate-y-1/2 bg-white shadow-xl rounded-full p-4 hover:bg-blue-50 transition-all duration-300 hover:scale-110 border border-gray-200 disabled:opacity-50 disabled:cursor-not-allowed z-20"
           >
-            <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 md:w-6 h-4 md:h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
@@ -247,7 +247,7 @@ const Testimonials: React.FC = () => {
 
         {/* Trust Stats */}
         <div className="mt-16">
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-xl p-6 text-center shadow-lg border border-gray-100">
               <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
               <div className="text-gray-800 font-medium">Happy Clients</div>
